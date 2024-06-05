@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto_1</title>
+    <link rel="preload" href="CSS/normalize.css" as="Style">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="preload" href="CSS/Styles.css" as="Style">
+    <link href="CSS/Styles.css" rel="Stylesheet" >
+    
+    <!-- Script para dar la bienvenida -->
+    <script>
+      window.onload = function() {
+          alert("¡Bienvenido a Rumbomex!");
+      };
+  </script>
+
+<!-- script para cambiar imagenes -->
+<script>
+  function cambiarImagenguada() {
+      document.getElementById("miImagen").src = "../Imagenes/guadalajara.webp";
+  }
+
+  function restaurarImagenguada() {
+      document.getElementById("miImagen").src = "../Imagenes/i4.jpg";
+  }
+
+  function cambiarImagencdmx() {
+      document.getElementById("miImagencdmx").src = "../Imagenes/mex.webp";
+  }
+
+  function restaurarImagencdmx() {
+      document.getElementById("miImagencdmx").src = "../Imagenes/i5.jpg";
+  }
+
+  function cambiarImagenmonte() {
+      document.getElementById("miImagenmonte").src = "../Imagenes/monte.webp";
+  }
+
+  function restaurarImagenmonte() {
+      document.getElementById("miImagenmonte").src = "../Imagenes/i6.jpg";
+  }
+</script>
+
+
+
+</head>
+<body>
+    <header>
+        <h1><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin-star" width="60" height="60" viewBox="0 0 24 24" stroke-width="2" stroke="#6f32be" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M15 11a3 3 0 1 0 -3.908 2.86" />
+            <path d="M11.059 21.25a2 2 0 0 1 -.472 -.35l-4.244 -4.243a8 8 0 1 1 13.646 -6.079" />
+            <path d="M17.8 20.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z" />
+          </svg>Rumbomex</h1>
+    </header>
+
+<div class="nav-bg">
+    <nav class="navegacion-principal contenedor">
+        <a href="cuerpoini.html"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home-2" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+            <path d="M10 12h4v4h-4z" />
+          </svg>Inicio</a>            
+        
+        <a href="destinoini.html"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plane" width="36" height="36" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M16 10h4a2 2 0 0 1 0 4h-4l-4 7h-3l2 -7h-4l-2 2h-3l2 -4l-2 -4h3l2 2h4l-2 -7h3z" />
+          </svg>Destinos</a>  
+
+        <a href="cuenta.html"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-check" width="36" height="36" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4" /><path d="M15 19l2 2l4 -4" />
+          </svg>Cuenta</a>                        
+    </nav>
+</div>
+
+    <section class="viaje">
+        <div class="contenido-viaje">
+            <h2>Busca tu próximo destino</h2>
+            <p>Descubre nuestros destinos favoritos para ti</p>
+            <a class="boton" href="destinoini.html">Buscar</a>
+        </div>        
+    </section>
+    
+    <main class="contenedor sombra">
+        <h2>Conocenos</h2>
+
+      <div class="servicios">
+        <section>
+          
+          <hr>
+            <h2>Destinos más visitados <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plane-tilt" width="36" height="36" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M14.5 6.5l3 -2.9a2.05 2.05 0 0 1 2.9 2.9l-2.9 3l2.5 7.5l-2.5 2.55l-3.5 -6.55l-3 3v3l-2 2l-1.5 -4.5l-4.5 -1.5l2 -2h3l3 -3l-6.5 -3.5l2.5 -2.5l7.5 2.5z" />
+              </svg></h2>
+              
+              <div class="slider">
+                <ul id="slideri">
+                  <p>Bienvenido a una ciudad llena de historia, cultura y encanto. <br><br><br>Guadalajara, la perla del occidente mexicano, te espera con los brazos abiertos para que vivas una experiencia inolvidable. 
+                    <br><br><br>Durante tu estancia, explorarás lugares emblemáticos como la majestuosa Catedral de Guadalajara,<br>el histórico Hospicio Cabañas y el pintoresco barrio de Tlaquepaque, famoso por sus artesanías y su ambiente bohemio.
+                    <br><br><br><a href="gudalajara.html">¡No esperes más para descubrir Guadalajara!</a></p>
+                  <li><img id="miImagen" src="../Imagenes/i4.jpg" alt="Imagen" onmouseover="cambiarImagenguada()" onmouseout="restaurarImagenguada()"></li>
+                  
+                  <p>¡Explora la fascinante Ciudad de México! <br><br><br>Bienvenido a la capital de México, <br>una metrópoli que te dejará sin aliento con su riqueza cultural, <br>su impresionante arquitectura y su vibrante vida urbana. <br><br> En nuestro viaje a la Ciudad de México, te sumergirás en la esencia misma de este fascinante lugar.
+                  <br><br>Sumérgete en la energía de los barrios bohemios como Coyoacán y la Condesa, <br>donde encontrarás galerías de arte, cafés acogedores y una vida nocturna vibrante. 
+                  <br><br><a href="cdmx.html">¡No esperes más para descubrir la Ciudad de México!</a></p>
+                  <li><img id="miImagencdmx" src="../Imagenes/i5.jpg" alt="Imagen" onmouseover="cambiarImagencdmx()" onmouseout="restaurarImagencdmx()"></li>
+                  
+                  <p>¡Descubre la emocionante Monterrey! <br><br><br>En nuestro viaje a Monterrey, te sumergirás en un mundo de contrastes, desde los imponentes <br>rascacielos que dominan el horizonte hasta las majestuosas montañas que rodean la ciudad. 
+                  <br><br><br>Prepárate para explorar sus atracciones más emblemáticas y descubrir su esencia vibrante. <br><br><br><a href="monterrey.html">¡No esperes más para descubrir Monterrey!</a></p>
+                  <li><img id="miImagenmonte" src="../Imagenes/i6.jpg" alt="Imagen" onmouseover="cambiarImagenmonte()" onmouseout="restaurarImagenmonte()"></li>
+                </ul>
+
+              </div>
+
+        </section>
+        
+        <section>
+          <hr>
+            <h2>Hospedajes favoritos <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-building" width="36" height="36" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l18 0" /><path d="M9 8l1 0" /><path d="M9 12l1 0" /><path d="M9 16l1 0" />
+                <path d="M14 8l1 0" /><path d="M14 12l1 0" /><path d="M14 16l1 0" /><path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+              </svg></h2>
+
+              <div class="slider">
+                <ul>
+                  <p>Hotel Oasis de oro. <br><br><br>Hotel ⭐⭐⭐⭐⭐ <br><br><br>Guadalajara, Jalisco. <br><br><br>MXN $2000 la noche. <br><br><br><a href="guadalajaraini.html">Reservar</a></p><li><img src="Imagenes/hotel4.jpg"></li>
+
+                  <p>Hotel Suites del Azul. <br><br><br>Hotel ⭐⭐⭐⭐ <br><br><br>Monterrey, Nuevo Leon. <br><br><br>MXN $2000 la noche. <br><br><br><a href="monterreyini.html">Reservar</a></p><li><img src="Imagenes/hotel2.jpg"></li>
+
+                  <p>Hotel del Prestigio. <br><br><br>Hotel ⭐⭐⭐⭐⭐ <br><br><br>Ciudad de México. <br><br><br>MXN $2000 la noche. </a><br><br><br><a href="cdmxini.html">Reservar</a></p> <li><img src="Imagenes/hotel3.jpg"></li>
+                </ul>
+
+              </div>
+        </section>
+      </div>
+        
+    </main>
+
+    <footer>
+        <p>Juan José Ramírez Espino  #21130578<br><br>Tel: 8712303536 </p>
+    </footer>
+  
+</body>
+</html>

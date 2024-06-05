@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <link rel="preload" href="CSS/normalize.css" as="Style">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="preload" href="CSS/Styles.css" as="Style">
+    <link href="CSS/Styles.css" rel="Stylesheet" >
+
+    <!-- Script para dar la bienvenida -->
+    <script>
+        window.onload = function() {
+            alert("¡Bienvenido Administrador!");
+        };
+    </script>
+    
+    <script>
+        function mostrarFechaHora() {
+            var ahora = new Date();
+            var fechaHora = "Fecha y hora actual: " + ahora.toLocaleString();
+            document.getElementById("fechaHora").textContent = fechaHora;
+        }
+    </script>
+</head>
+<body onload="mostrarFechaHora()">
+    <div id="fechaHora"></div>
+    <header>
+        <h1><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin-star" width="60" height="60" viewBox="0 0 24 24" stroke-width="2" stroke="#6f32be" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M15 11a3 3 0 1 0 -3.908 2.86" />
+            <path d="M11.059 21.25a2 2 0 0 1 -.472 -.35l-4.244 -4.243a8 8 0 1 1 13.646 -6.079" />
+            <path d="M17.8 20.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138z" />
+          </svg>Rumbomex</h1>
+    </header>
+    <br>
+
+    <main class="contenedordes sombra " >
+        <h2>Administrar</h2>
+        <form control="form1" name="form1" onsubmit="return Valida(this);" method="post" action="eliminar.php" >
+        <p>Dar de baja una habitacion con id: <input type="number" name="eliminartxt" id="eliminartxt"> <button type="submit" class="boton" name="rese" >Eliminar</button></p>
+        <br>
+        </form>
+        <script>
+             function Valida(formulario){
+                 // Validacion de campos NO VACIOS
+                if((formulario.eliminartxt.value.length == 0)){
+                    alert('Falta informacion para eliminar');
+                    return false;
+                }
+            }
+        </script>
+        
+        <form control="form1" name="form1" onsubmit="return Validas(this);" method="post" action="editar.php">
+        <label>Modificar una habitacion con id:</label><input type="number" name="editartxt" id="editartxt">
+        <br><br><label>Destino:</label><select name="destinoed" id="destinoed"><option>CDMX</option><option>Monterrey</option><option>Guadalajara</option><option>Mazatlan</option></select>
+        <br><br><label>Numero de habitaciones: </label><input type="number" name="editarhab" id="editarhab"> <p><label>Fecha de inicio: </label> <input type="date" name="editarfecha" id="editarfecha"></p>
+        <p><label>Editar tipo de habitacion:</label><select name="editartipo" id="editartipo"><option>Sencilla</option><option>Doble</option></select>
+        <br><br><label>Cantidad de personas: </label><input type="number" name="editarperso" id="editarperso"></p>
+        <label>Nuevo precio:</label><input type="text" name="totaltxt" id="totaltxt">
+        <br><button type="submit" class="boton" name="rese" >Editar</button>
+        <br>
+        </form>
+
+        <script>
+            function Validas(formulario){
+                 // Validacion de campos NO VACIOS
+                if((formulario.editartxt.value.length == 0) || (formulario.editarhab.value.length == 0) || (formulario.editarfecha.value.length == 0) || (formulario.editarperso.value.length == 0) || (formulario.totaltxt.value.length == 0)){
+                    alert('Falta informacion para editar');
+                    return false;
+                }
+               
+                //Validar el total
+                if(isNaN(parseInt(formulario.totaltxt.value))){
+                    alert('Precio debe ser numero');
+                    return false;
+                }
+                
+                //Validar ID
+                var eid = /^[0-9]{2}$/;
+
+                if (!eid.test(formulario.editartxt.value)) {
+                alert('ID no válido');
+                return false;
+                }
+                
+                // Si no hemos detectado fallo devolvemos TRUE
+                return true;
+        
+            }
+            </script>
+
+        <br>
+        <iframe src="mostrar.php" width="550" height="300"></iframe>
+
+        <form action="cerrarses.php" method="post">
+            <br>
+            <br>
+           
+        <a class="boton" href="Cuerpo.html">Cerrar Sesion</a>
+        </form>
+
+    </main>
+    
+</body>
+</html>

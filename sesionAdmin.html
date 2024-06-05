@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesion admin</title>
+    <link rel="preload" href="CSS/normalize.css" as="Style">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="preload" href="CSS/stilossesion.css" as="Style">
+    <link href="CSS/stilossesion.css" rel="Stylesheet" >
+</head>
+<body>
+    <form action="admin.php" onsubmit="return Valida(this);" method="post">
+    
+        <h1> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-check" width="36" height="36" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4" /><path d="M15 19l2 2l4 -4" />
+        </svg>Iniciar sesión</h1>
+        <table>
+            <td><label>Usuario</label></td>
+            <tr><td><input type="text" name="txtadmin" placeholder="Ingresar Usuario"/></td></tr>
+            <tr><td><label>Contraseña</label></td></tr>
+            <tr><td><input type="password" name="txtcontra"placeholder="Ingrese contraseña"/></td></tr>
+            <tr><td><input type="submit" value="Ingresar"></td></tr>
+            <script>
+                function Valida(formulario){
+                    var evusuario = /^[a-zA-Z0-9]+$/; 
+                    var evcontra = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/; 
+
+                    // Validacion de campos NO VACIOS
+                   if((formulario.txtadmin.value.length == 0) || (formulario.txtcontra.value.length == 0)){
+                       alert('Falta informacion');
+                       return false;
+                   }
+
+                    // Validación del nombre de usuario
+                    if (!(evusuario.test(formulario.txtadmin.value))) {
+                         alert('El nombre de usuario Incorrecto');
+                         return false;
+                    }
+
+                    // Validación de la contraseña
+                    if (!(evcontra.test(formulario.txtcontra.value))) {
+                          alert('Contraseña incorecta');
+                          return false;
+                    }
+               }
+           </script>
+            
+            <tr><td><a href="sesion.html">Regresar</a></td></tr>
+        </table>
+    </form>
+    
+</body>
+</html>

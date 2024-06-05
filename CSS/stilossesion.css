@@ -1,0 +1,53 @@
+/* Estilos al inicio de sesion */
+h1{
+    text-align: center;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(241, 220, 238);
+    font-size: 16px;
+    font-family: SimSun, Arial, sans-serif;
+    font-weight: bold;
+}
+
+table{
+    margin: 0;
+    border: 2px;
+    background-color: rgb(185, 185, 185);
+    position: center;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+td{
+    padding: 10px 40px;
+}
+
+input[type="text"], input[type="password"]{
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    box-sizing: border-box;
+    border-radius: .5rem;
+    background-color: rgb(234, 234, 235);
+
+}
+
+input[type=submit]{
+    font-size: 16px;
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    height: 40%;
+    width: 200px;
+    
+}
+
+a{
+    font-size: 12px;
+}
